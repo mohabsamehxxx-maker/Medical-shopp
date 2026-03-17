@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - 979 Medical Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-bg">
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-800 bg-slate-950 bg-opacity-95 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button id="backBtn" class="p-2 hover:bg-slate-800 rounded-lg transition">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">979</span>
+                    </div>
+                    <span class="text-white font-semibold">Medical Store</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="app" class="min-h-screen pt-20 pb-8">
+        <div class="max-w-2xl mx-auto px-4">
+            <h1 class="text-4xl font-bold text-white mb-8">Shopping Cart</h1>
+
+            <div id="emptyCart" class="text-center py-12">
+                <p class="text-slate-400 mb-4">Your cart is empty</p>
+                <a href="index.html" class="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition">Continue Shopping</a>
+            </div>
+
+            <div id="cartContent" class="hidden">
+                <div id="cartItems" class="space-y-4 mb-8"></div>
+
+                <div class="border-t border-slate-800 pt-8 mb-8">
+                    <div class="flex justify-between mb-4">
+                        <span class="text-slate-400">Subtotal:</span>
+                        <span id="subtotal" class="text-white font-semibold">$0.00</span>
+                    </div>
+                    <div class="flex justify-between mb-6">
+                        <span class="text-white text-lg font-semibold">Total:</span>
+                        <span id="total" class="text-white text-lg font-bold text-blue-400">$0.00</span>
+                    </div>
+                    <button id="checkoutBtn" class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-lg font-semibold transition">
+                        Proceed to Checkout
+                    </button>
+                </div>
+
+                <a href="index.html" class="block text-center text-slate-400 hover:text-white transition">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

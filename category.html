@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - 979 Medical Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-bg">
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-800 bg-slate-950 bg-opacity-95 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button id="backBtn" class="p-2 hover:bg-slate-800 rounded-lg transition">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">979</span>
+                    </div>
+                    <span class="text-white font-semibold">Medical Store</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="cartBtn" class="relative p-2 hover:bg-slate-800 rounded-lg transition">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 8m10 0l2 8M9 13v8m4 0v-8" />
+                    </svg>
+                    <span id="cartCount" class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="app" class="min-h-screen pt-20 pb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="mb-12">
+                <h1 id="categoryTitle" class="text-4xl font-bold text-white mb-2">Category</h1>
+                <p id="categoryDesc" class="text-slate-400">Products in this category</p>
+            </div>
+
+            <div id="productsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
