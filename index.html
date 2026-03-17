@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>979 - Medical Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-bg">
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-800 bg-slate-950 bg-opacity-95 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">979</span>
+                </div>
+                <span class="text-white font-semibold">Medical Store</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="cartBtn" class="relative p-2 hover:bg-slate-800 rounded-lg transition">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 8m10 0l2 8M9 13v8m4 0v-8" />
+                    </svg>
+                    <span id="cartCount" class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="app" class="min-h-screen pt-20 pb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="mb-12">
+                <h1 class="text-4xl font-bold text-white mb-2">Welcome to 979</h1>
+                <p class="text-slate-400">Browse our medical store (demo experience)</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <button class="category-card" data-category="pain-relief">
+                    <div class="card-icon">💊</div>
+                    <div class="card-title">Pain Relief</div>
+                    <div class="card-desc">Analgesics & Pain Management</div>
+                </button>
+
+                <button class="category-card" data-category="antibiotics">
+                    <div class="card-icon">🦠</div>
+                    <div class="card-title">Antibiotics</div>
+                    <div class="card-desc">Bacterial Infections</div>
+                </button>
+
+                <button class="category-card" data-category="cold-flu">
+                    <div class="card-icon">🤧</div>
+                    <div class="card-title">Cold & Flu</div>
+                    <div class="card-desc">Respiratory Relief</div>
+                </button>
+
+                <button class="category-card" data-category="vitamins">
+                    <div class="card-icon">🥗</div>
+                    <div class="card-title">Vitamins</div>
+                    <div class="card-desc">Nutritional Support</div>
+                </button>
+
+                <button class="category-card" data-category="diabetes">
+                    <div class="card-icon">🩺</div>
+                    <div class="card-title">Diabetes Care</div>
+                    <div class="card-desc">Blood Sugar Management</div>
+                </button>
+
+                <button class="category-card" data-category="blood-pressure">
+                    <div class="card-icon">❤️</div>
+                    <div class="card-title">Blood Pressure</div>
+                    <div class="card-desc">Cardiovascular Health</div>
+                </button>
+
+                <button class="category-card" data-category="first-aid">
+                    <div class="card-icon">🩹</div>
+                    <div class="card-title">First Aid</div>
+                    <div class="card-desc">Bandages & Supplies</div>
+                </button>
+
+                <button class="category-card" data-category="devices">
+                    <div class="card-icon">⚙️</div>
+                    <div class="card-title">Medical Devices</div>
+                    <div class="card-desc">Equipment & Tools</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
